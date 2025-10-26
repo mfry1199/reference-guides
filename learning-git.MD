@@ -16,34 +16,41 @@ Specify files/file types that should be ignored by git, remaining untracked and 
 
 ## Commands
 
-### Setting Up / Connecting a Repo
+### Setup and Configuration
 
 - **`git init`:** Initialize a git repo locally (Create a git repo)
 - **`git clone <GitHub URL>`:** Make an exact copy of a remote repo so that you have a local repo that's an exact copy
 - **`git remote add origin <GitHub URL>`:** Connects local repo to remote repo in GitHub
+- git config user.name / user.email <name> / <email>
+- .gitignore
 
-### Updating / Pulling Locally
+### Working Directory and Staging
 
 - **`git pull`:** Fetch and merge changes from the remote repository (git fetch and then merge or rebase depending on configuration. Typically merge is set up)
+- **`git pull --rebase`**: Rebases local commits onto remote version to add your changes to the most updated version
 - **`git fetch`**: Download objects and refs from remote repository (Doesn't merge or rebase anything; Grabs info about what has changed in remote without changing anything)
 - **`git fetch --prune`**: Cleans up remote tracking branches (local) to match actual remote branches
-- git fetch --tags: Removes tracking tags (local) that are no longer in remote repository
-- git pull --rebase: Rebases local commits onto remote version to add your changes to the most updated version
+- **`git fetch --tags`**: Removes tracking tags locally that are no longer in remote repository
+- git status
+- git add <file> / git add --all
+- git reset <file> 
+- git checkout -- <file>
+- git rm <file>: Remove file from tracking
 
-### Branching
+### Committing and Versioning
 
-- git reset [file]: Unstage changes (remove from staging area)
 - git checkout -- [file]: Discard changes in working directory
+- git reset [file]: Unstage changes (remove from staging area)
 - git rm [file]: Remove file from working directory and staging area
 - git merge: Combines changes by pointing 2 commits to the same history effectively merging the codebases. Creates forks because initial separate of checkout remains and is pointed to by a new commit (Safest option for combining changes)
 - git rebase \<target-branch\>: Combines changes by moving commits from one branch to target branch creating a linear commit history. Shouldnt be used in shared repos or main branches. Main benefit is readability and debugging and a cleaner history. If a rebase a feature branch it takes the commits and puts them on top of main or whatever branch I put.
 
-### Pushing Updates
+### Branching and Merging
 
 - git push origin v1.0.0
 - git push: Upload local commits to the remote repository
 
-### Tagging
+### Stashing and Temporary Changes
 
 - git tag v1.0.0: Adds a tag to a commit so that commit can have a version attached or some other label that makes it easier to roll between versions by checking out to them. Also able to add metadata using a few add on flags
 - git tag -a v1.0 -m "First stable release": Allows metadata to be added to tag. Additional flags available.
@@ -53,7 +60,7 @@ Specify files/file types that should be ignored by git, remaining untracked and 
 - git tag -a v1.2 9fceb02: Tag a commit using the commits checksum in case you need to tag an old commit
 - git show v1.0.0: Shows tagged commit and the data it has
 
-### Helpers / Exploratory
+### Collaboration and Remotes
 
 - **git diff:** Shows diff between current working directory and staging area
   - add **--staged:** Shows diff between staging area and last commit so you can see how committing added files will change the repository
@@ -63,6 +70,10 @@ Specify files/file types that should be ignored by git, remaining untracked and 
 - git diff v1.0.0..HEAD: Find the diff between working directory and tagged commit
 - git log \<branch\>..origin/\<branch\>: Shows new commits on remote branch (Need to run git fetch first)
 - **`git diff \<branch\> origin/\<branch\>`**: Shows code difference between local and remote branch (Need to run git fetch first)
+
+### Inspection and Debugging
+
+### Undoing and Recovery
 
 ## General Workflows
 
