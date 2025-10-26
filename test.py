@@ -2,6 +2,6 @@
 # git checkout --
 # git rm
 
-# this is a test alos
+# this is a test also
 
 
