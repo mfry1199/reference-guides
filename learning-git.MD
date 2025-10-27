@@ -1,28 +1,21 @@
 # Git and GitHub Guide
 
+This guide provides a practical overview of how to use git with GitHub. It provides a glossary of commands and different applications of each command, it provides a section for any definitions that may be needed to understand what the commands do, and there is a section that explain various general workflows. The workflows do not cover every scenario, but they are some common workflows that show up in industry. Everything in this guide is based on what is generally done in industry.
+
 ## Definitions
 
 - Staging area: Where files go that are ready to be committed (after running "add")
-
-## File Types
-
-### .gitignore
-
-Specify files/file types that should be ignored by git, remaining untracked and unseen. Good for any file that shouldn't be pushed to remote, but needs to be kept locally.
-
-- ***.log:** Ignore log files
-- **/build/:** Ignore build files such as from pyinstaller
-- **./vscode:** Ignore vscode specific file
 
 ## Commands
 
 ### Setup and Configuration
 
 - **`git init`:** Initialize a git repo locally (Create a git repo)
-- **`git clone <GitHub URL>`:** Make an exact copy of a remote repo so that you have a local repo that's an exact copy
+- **`git clone <GitHub URL>`:** Make an exact copy of a remote repo locally
 - **`git remote add origin <GitHub URL>`:** Connects local repo to remote repo in GitHub
-- git config user.name / user.email <name> / <email>
-- .gitignore
+- **`git config user.name <name>`:** Configures name for commit meta data
+- **`git user.email <email>`:** Configures email for commit meta data
+- **.gitignore file:** Files specified within this file are ignored by git
 
 ### Working Directory and Staging
 
