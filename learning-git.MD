@@ -13,8 +13,8 @@ This guide provides a practical overview of how to use git with GitHub. It provi
 - **`git init`:** Initialize a git repo locally (Create a git repo)
 - **`git clone <GitHub URL>`:** Make an exact copy of a remote repo locally
 - **`git remote add origin <GitHub URL>`:** Connects local repo to remote repo in GitHub
-- **`git config user.name <name>`:** Configures name for commit meta data
-- **`git user.email <email>`:** Configures email for commit meta data
+- **`git config user.name <name>`:** Configures name for commit metadata
+- **`git user.email <email>`:** Configures email for commit metadata
 - **.gitignore file:** Files specified within this file are ignored by git
 
 ### Working Directory and Staging
