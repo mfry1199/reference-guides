@@ -15,12 +15,6 @@ This guide provides a practical overview of how to use git with GitHub. It provi
 - **`git remote add origin <GitHub URL>`:** Connects local repo to remote repo in GitHub
 - **`git config user.name <name>`:** Configures name for commit metadata
 - **`git config user.email <email>`:** Configures email for commit metadata
-<<<<<<< HEAD
-=======
-- **`git user.email <email>`:** Configures email for commit metadata
->>>>>>> 7f2a31f (Update learning-git.MD)
-=======
->>>>>>> ecf2016 (fixing pushed issues)
 - **.gitignore file:** Files specified within this file are ignored by git
 
 ### Working Directory and Staging
