@@ -6,7 +6,7 @@
 
 ## File Types
 
-### .gitignore #
+### .gitignore
 
 Specify files/file types that should be ignored by git, remaining untracked and unseen. Good for any file that shouldn't be pushed to remote, but needs to be kept locally.
 
